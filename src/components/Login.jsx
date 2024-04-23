@@ -31,9 +31,11 @@ const firebaseConfig = {
     };
 
     return (
-        <button onClick={handleGoogleLogin}>
+        <div className="flex items-center justify-center min-h-screen">
+        <button onClick={handleGoogleLogin} className="rounded bg-green-300 px-4 py-2" >
             Sign in with Google
         </button>
+        </div>
     );
   };
 
