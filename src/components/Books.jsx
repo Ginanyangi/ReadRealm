@@ -25,7 +25,9 @@ const Book = () => {
             )}
              <p>{truncateDescription(book.volumeInfo.description || 'No description available')}</p>
             {book.volumeInfo.description && book.volumeInfo.description.length > 200 && (
-              <button onClick={() => window.open(book.volumeInfo.infoLink)}>Read more</button>
+              <button onClick={() => window.open(book.volumeInfo.infoLink)} 
+              className="bg-red-950 text-white px-4 py-2 rounded-md hover:bg-orange-900 focus:outline-none text-center"
+              >Read more</button>
              )}  
             </li>
         </ul>

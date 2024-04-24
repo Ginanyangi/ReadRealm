@@ -45,6 +45,7 @@ const ContactForm = () => {
     };
   
     return (
+  
       <form className="contact-form bg-brown-800 p-8 rounded-lg" onSubmit={handleSubmit}>
         <div className="name-section flex space-x-4 mb-4">
         <label className="block text-white mb-1" htmlFor="firstName">First Name</label>  
@@ -54,7 +55,7 @@ const ContactForm = () => {
             value={formData.firstName}
             onChange={handleChange}
             placeholder="First Name"
-            className="w-full px-3  rounded-md-border border-gray-300 focus:outline-none focus:border-blue-500"
+            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 ml-*0px"
             required
           />
           
@@ -93,6 +94,7 @@ const ContactForm = () => {
         /> <br />
         <button type="submit" className="bg-red-950 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none text-center">Submit</button>
       </form>
+      
     );
   };
   
