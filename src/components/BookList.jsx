@@ -1,11 +1,13 @@
 import axios from 'axios';
-import {useState, useEffect } from 'react';
+import {useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ReadingListContext } from './components/ReadingListContext';
 
 const BookList = () => {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
+    const {addToReadingList} = useContext(ReadingListContext);
 
     useEffect(() => {
         const fetchBooks = async () => {
@@ -45,12 +47,13 @@ const BookList = () => {
                          <p>{book.volumeInfo.authors?.join(',')}</p>
                          <button> View Book</button>
                         </Link>
+                        <button onClick={() => addToReadingList(book)}>Add to Reading List</button>
                     </div>
                 ))
             }
         </div>
     );
     
-}
+};
 
 export default BookList;

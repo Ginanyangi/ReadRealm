@@ -6,6 +6,7 @@ import GoogleLoginButton from "./components/Login";
 import ContactForm from "./components/Contact";
 import BookList from "./components/BookList";
 import Books from './components/Books';
+import ReadingList from "./components/ReadingList";
 
 const App = () => {
   return(
@@ -17,6 +18,8 @@ const App = () => {
         <Route path='/contact' element={<ContactForm />} />
         <Route path='/books' element={<BookList />} />
         <Route path='/books/:bookId' element={<Books/>} />
+        <Route path='/readinglist' element={<Reading List />} />
+
       </Routes>
       {/* <Footer /> */}
     </Router>
