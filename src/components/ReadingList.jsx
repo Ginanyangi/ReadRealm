@@ -1,10 +1,15 @@
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import{ BooksContext }from '../components/ReadingListContext';
 
 
 const ReadingList = () => {
     const { readingList } = useContext(BooksContext);
+    
+    useEffect(() => {
+        console.log('reading list has changed');
+        console.log('Current readingList state:' ,readingList);
+    },[readingList]);
 
     return (
         <div>

@@ -11,7 +11,6 @@ const [subject, setSubject] = useState('');
 
 const subjects= ['Fiction', 'Non-fiction','Mystery', 'Science Fiction', 'Fantasy', 'Biography', 'Romance' ]
 
-// const genres=['All', 'Fiction', 'Non-fiction', 'Mystery', 'Science Fiction', 'Fantasy', 'Biography', 'Romance'];
 
 const handleSearch = async () => {
     setLoading(true);
