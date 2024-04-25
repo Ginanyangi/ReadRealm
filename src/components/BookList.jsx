@@ -1,13 +1,16 @@
 import axios from 'axios';
 import {useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ReadingListContext } from './components/ReadingListContext';
+import { BooksContext } from './ReadingListContext';
+
 
 const BookList = () => {
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const {addToReadingList} = useContext(ReadingListContext);
+    const { addBookToList}= useContext(BooksContext);
+    
+    
 
     useEffect(() => {
         const fetchBooks = async () => {
@@ -31,6 +34,8 @@ const BookList = () => {
     },[]);
     console.log(books);
 
+    
+  
  if (loading) {
     return <div> Loading...</div>
  }
@@ -45,9 +50,9 @@ const BookList = () => {
                          <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
                          <h3>{book.volumeInfo.title}</h3>
                          <p>{book.volumeInfo.authors?.join(',')}</p>
-                         <button> View Book</button>
+                         <button> View Book</button><br />
                         </Link>
-                        <button onClick={() => addToReadingList(book)}>Add to Reading List</button>
+                        <button onClick={() =>addBookToList(book)}>Add Book</button>
                     </div>
                 ))
             }

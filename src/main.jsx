@@ -2,12 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { ReadingListProvider } from './components/ReadingListContext.jsx'
+import { BooksProvider } from './components/ReadingListContext';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <ReadingListProvider>
+    <BooksProvider>
+   
     <App />
-    </ReadingListProvider>
-  </React.StrictMode>,
-)
+    
+    </BooksProvider>
+   </React.StrictMode>,
+);
