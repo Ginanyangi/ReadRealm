@@ -6,7 +6,6 @@ const [query, setQuery] = useState('');
 const [books, setBooks] = useState([]);
 const [loading, setLoading] = useState(false);
 const [error, setError] = useState(null);
-// const [genre, setGenre ] = useState('');
 const [subject, setSubject] = useState('');
 
 const subjects= ['Fiction', 'Non-fiction','Mystery', 'Science Fiction', 'Fantasy', 'Biography', 'Romance' ]
@@ -19,10 +18,7 @@ const handleSearch = async () => {
     try {
         let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
             
-        // If a genre is selected and it's not 'All', add it to the API query
-        // if (genre && genre !== 'All') {
-        //     apiUrl += `+subject:${genre}`;
-        // }
+    
         if (subject) {
             apiUrl += `+subject:${subject}`;
         }
@@ -41,21 +37,22 @@ const handleSearch = async () => {
 };
 
 
-
-
-
 return (
-    <div>
-        <h1 className="text-5xl font-bold text-centre color-brown-200">Book Search</h1><br />
+    <div className="min-h-screen bg-emerald-200 flex flex-col items-center justify-center text-black">
+        <h1 className="text-5xl font-bold mb-4">Book Search</h1><br />
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
         <input
                 type="text"
                 placeholder="Search for books"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className='w-48 pt-2 border rounded-md border-blue-400'
+                className='w-48 pt-2 border rounded-md border-brown-600 text-brown-800 focus:outline-none'
             />
             {/*{Subject filter} */}
-            <select value={subject} onChange={(e) => setSubject(e.target.value)}>
+            <select value={subject} 
+             onChange={(e) => setSubject(e.target.value)}
+             className="p-2 border rounded-md border-brown-600 text-brown-800 focus:outline-none"
+            >
        <option value="">All Subjects</option>
          {subjects.map((subj) => (
         <option key={subj} value={subj}>
@@ -73,17 +70,22 @@ return (
             </option>
            ))}
         </select> */}
-        <button onClick={handleSearch} className="bg-red-950 text-white px-4 py-2 rounded-md hover:bg-orange-900 focus:outline-none text-center">Search</button>
+        
+        <button onClick={handleSearch}
+         className="bg-red-950 text-black px-4 py-2 rounded-md hover:bg-brown-700 focus:outline-none text-center">
+            Search
+            </button>
+        </div>
 
-            {loading && <div>Loading...</div>}
-            {error && <div>Error fetching data: {error.message}</div>}
+            {loading && <div className="mt-4">Loading...</div>}
+            {error && <div className="mt-4 text-red-500">Error fetching data: {error.message}</div>}
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
                 {books.map((book) => (
-                    <div key={book.id}>
-                        <h2>{book.volumeInfo.title}</h2>
-                        <p>{book.volumeInfo.authors?.join(', ')}</p>
-                        <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
+                    <div key={book.id} className="bg-white p-4 rounded-md shadow-md text-brown-800">
+                        <h2 className="font-semibold text-xl">{book.volumeInfo.title}</h2>
+                        <p className="text-brown-600">{book.volumeInfo.authors?.join(', ')}</p>
+                        <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} className="mt-2" />
                     </div>
                 ))}
             </div>
