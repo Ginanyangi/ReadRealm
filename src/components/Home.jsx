@@ -38,7 +38,7 @@ const handleSearch = async () => {
 
 
 return (
-    <div className="min-h-screen bg-emerald-200 flex flex-col items-center justify-center text-black">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center text-black">
         <h1 className="text-5xl font-bold mb-4">Book Search</h1><br />
         <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
         <input
