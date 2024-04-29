@@ -7,6 +7,9 @@ const Navbar = () => {
             <div className="container mx-auto flex justify items-center text-black">
             <ul className="hidden md:flex space-x-4 bg-brown-800">
                 <li>
+                    <Link to ='/login' className="text-black hover:text-brown-300">Login</Link>
+                </li>
+                <li>
                     <Link to="/" className="text-black hover:text-brown-300">Home</Link>
                 </li>
                 <li>

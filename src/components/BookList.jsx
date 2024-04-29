@@ -49,17 +49,17 @@ const BookList = () => {
                          <Link to={`/books/${book.id}`} state={book} className="block">
                          <img src={book.volumeInfo.imageLinks?.thumbnail} 
                            alt={book.volumeInfo.title}
-                           className="w-full h-48 object-cover rounded-t-lg mb-2"
+                           className="w-full h-50 object-cover rounded-t-lg mb-2"
                             />                        
                          <h3>{book.volumeInfo.title}</h3>
                          <p>{book.volumeInfo.authors?.join(',')}</p>
-                         <button className="mt-4 bg-red-700 hover:bg-brown-600 text-black px-4 py-2 rounded-md focus:outline-none"> 
-                            View Book</button><br />
+                         <button className="mt-4 bg-red-950 hover:bg-brown-600 text-white px-4 py-2 rounded-md focus:outline-none"> 
+                            View Book</button><br /><br />
                         </Link>
                         
                          <button>
                             <Link to={"/readinglist"} onClick={() =>addBookToList(book)}
-                            className="block text-center"
+                            className="block text-center mt-4 bg-red-950 text-white px-4 py-2 rounded-md  focus:outline-none text-center"
                             >
                                 Add Book to Reading List</Link>
                          </button>
