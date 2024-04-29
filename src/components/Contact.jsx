@@ -46,27 +46,28 @@ const ContactForm = () => {
   
     return (
   
-      <form className="contact-form bg-brown-800 p-8 rounded-lg" onSubmit={handleSubmit}>
-        <div className="name-section flex space-x-4 mb-4">
-        <label className="block text-white mb-1" htmlFor="firstName">First Name</label>  
+      <form className="contact-form bg-[url('src/assets/Contact.avif')] bg-cover bg-center p-14 rounded-lg shadow-md border" onSubmit={handleSubmit}>
+        <h1 className="text-6xl font-bold mb-4 ">Contact Us</h1>
+        <div className="name-section flex space-x-4 mb-6">
+        <label className="block text-white mb-2" htmlFor="firstName">First Name</label>  
           <input
             type="text"
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
             placeholder="First Name"
-            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 ml-*0px"
+            className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 "
             required
           />
           
-           <label className="block text-white mb-1" htmlFor="lastName">Last Name</label>
+           <label className="block text-white mb-1 text-1xl text-base" htmlFor="lastName">Last Name</label>
           <input
             type="text"
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
             placeholder="Last Name"
-            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
+            className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 bg-indigo-100"
             required
           />
           
@@ -92,7 +93,7 @@ const ContactForm = () => {
           rows='4'
           required
         /> <br />
-        <button type="submit" className="bg-red-950 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none text-center">Submit</button>
+        <button type="submit" className="bg-amber-950 text-white px-4 py-2 rounded-md hover:bg-white justify-center focus:outline-none text-center">Submit</button>
       </form>
       
     );

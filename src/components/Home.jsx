@@ -38,15 +38,15 @@ const handleSearch = async () => {
 
 
 return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center text-black">
-        <h1 className="text-5xl font-bold mb-4">Book Search</h1><br />
+    <div className="min-h-screen bg-white flex flex-col items-center  text-black  bg-[url('src/assets/login.avif')] bg-cover bg-center">
+        <h1 className="text-6xl font-bold mb-4">Book Search</h1><br />
         <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
         <input
                 type="text"
                 placeholder="Search for books"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className='w-48 pt-2 border rounded-md border-brown-600 text-brown-800 focus:outline-none'
+                className='w-3/4 px-4 pt-2 pb-2 border rounded-md border-brown-600 text-brown-800 focus:outline-none'
             />
             {/*{Subject filter} */}
             <select value={subject} 
