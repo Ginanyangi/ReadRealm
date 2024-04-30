@@ -1,5 +1,6 @@
 import React,{ useState } from "react";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 const [query, setQuery] = useState('');
@@ -82,11 +83,17 @@ return (
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
                 {books.map((book) => (
+                    <Link to={`/books/${book.id}`} state={book} className="block">
                     <div key={book.id} className="bg-white p-4 rounded-md shadow-md text-brown-800">
                         <h2 className="font-semibold text-xl">{book.volumeInfo.title}</h2>
                         <p className="text-brown-600">{book.volumeInfo.authors?.join(', ')}</p>
                         <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} className="mt-2" />
-                    </div>
+                        <button className="mt-4 bg-red-950 hover:bg-brown-600 text-white px-4 py-2 rounded-md focus:outline-none"> 
+                            View Book</button><br /><br />
+                            </div>
+                    </Link>
+                    
+                    
                 ))}
             </div>
     </div>
