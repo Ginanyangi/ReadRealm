@@ -46,7 +46,7 @@ const ContactForm = () => {
   
     return (
   
-      <form className="contact-form bg-[url('src/assets/Contact.avif')] bg-cover bg-center p-14 rounded-lg shadow-md border" onSubmit={handleSubmit}>
+      <form className="contact-form bg-[url('static/images/Contact.avif')] bg-cover bg-center p-14 rounded-lg shadow-md border" onSubmit={handleSubmit}>
         <h1 className="text-6xl font-bold mb-4 ">Contact Us</h1>
         <div className="name-section flex space-x-4 mb-6">
         <label className="block text-white mb-2" htmlFor="firstName">First Name</label>  
