@@ -2,8 +2,10 @@ import React from 'react';
 
 const Footer = () => {
     return (
-    <div>
-        <p>2024 ReadRealm. All Rights Reserved.</p>
+    <div classname='justify-center text-center'>
+        <p>2024 ReadRealm. All Rights Reserved.
+            Made by Georgina Kabasa
+        </p>
     </div>
     )
 }

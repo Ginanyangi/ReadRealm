@@ -39,7 +39,7 @@ const handleSearch = async () => {
 
 
 return (
-    <div className="min-h-screen bg-white flex flex-col items-center  text-black  bg-[url('src/assets/login.avif')] bg-cover bg-center">
+    <div className="min-h-screen bg-white flex flex-col items-center  text-black  bg-[url('static/images/login.avif')] bg-cover bg-center">
         <h1 className="text-6xl font-bold mb-4">Book Search</h1><br />
         <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
         <input

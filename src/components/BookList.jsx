@@ -17,7 +17,7 @@ const BookList = () => {
             try {
                 const response = await axios.get ('https://www.googleapis.com/books/v1/volumes', {
                   params: {
-                    q:'subject:fiction',
+                    q:'subject:history',
                     orderBy:'newest',
                     maxResults:30
                   }  
