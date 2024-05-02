@@ -31,7 +31,7 @@ const firebaseConfig = {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen  bg-gradient-to-r from-yellow-800 to-red-950 bg-[url('src/assets/login.avif')] bg-cover bg-center" >
+        <div className="flex items-center justify-center min-h-screen  bg-[url('static/images/login.avif')] bg-cover bg-center" >
         <button onClick={handleGoogleLogin} className="rounded bg-red-950 px-4 py-2" >
             Sign in with Google
         </button>
