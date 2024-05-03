@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-    <footer className='text-center bg-orange-900 fixed bottom-0 w-full'>
+    <footer className='text-center bg-black text-white fixed bottom-0 w-full'>
         <p>2024 ReadRealm. All Rights Reserved.
             Made by Georgina Kabasa
         </p>
