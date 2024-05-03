@@ -46,10 +46,10 @@ const ContactForm = () => {
   
     return (
   
-      <form className="contact-form bg-[url('static/images/Contact.avif')] bg-cover bg-center p-14 rounded-lg shadow-md border" onSubmit={handleSubmit}>
+      <form className="contact-form  bg-orange-950 bg-l[url('static/images/Contact.avif')] bg-cover bg-center p-14 rounded-lg shadow-md border" onSubmit={handleSubmit}>
         <h1 className="text-6xl font-bold mb-4 ">Contact Us</h1>
-        <div className="name-section flex space-x-4 mb-6">
-        <label className="block text-white mb-2" htmlFor="firstName">First Name</label>  
+        <div className="name-section ">
+        <label className="block text-white mb-2" htmlFor="firstName">First Name</label>
           <input
             type="text"
             name="firstName"
@@ -93,7 +93,7 @@ const ContactForm = () => {
           rows='4'
           required
         /> <br />
-        <button type="submit" className="bg-amber-950 text-white px-4 py-2 rounded-md hover:bg-white justify-center focus:outline-none text-center">Submit</button>
+        <button type="submit" className="bg-black text-white px-4 py-2 rounded-md hover:bg-white justify-center focus:outline-none text-center">Submit</button>
       </form>
       
     );

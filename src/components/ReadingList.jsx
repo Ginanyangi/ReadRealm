@@ -13,8 +13,8 @@ const ReadingList = () => {
 
 
     return (
-        <div className="p-6 bg-deep-brown text-white">
-                  <h1 className="text-3xl font-bold mb-4">Reading List</h1>
+        <div className="p-6 bg-deep-brown text-black ">
+                  <h1 className="text-3xl font-bold mb-4">Add Books to your Reading List</h1>
                 <div className="grid grid-cols-2  md:grid-cols-4 gap-4">
                       {readingList.map((book) => (
                         <div key={book.id} className='bg-brown-800 p-4 rounded-lg shadow-lg hover:shadow-xl'> 

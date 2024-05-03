@@ -7,20 +7,20 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-center text-white">
             <ul className="hidden md:flex space-x-4 bg-brown-800">
                 <li>
-                    <Link to ='/login' className="text-black hover:text-brown-300">Login</Link>
+                    <Link to ='/login' className="text-white hover:text-brown-300">Login</Link>
                 </li>
                 <li>
-                    <Link to="/" className="text-black hover:text-brown-300">Home</Link>
+                    <Link to="/" className="text-white hover:text-brown-300">Home</Link>
                 </li>
                
                 <li>
-                    <Link to='/Books' className="text-black hover:text-brown-300">Books</Link>
+                    <Link to='/Books' className="text-white hover:text-brown-300">Books</Link>
                 </li>
                 <li>
-                    <Link to='/readinglist' className="text-black hover:text-brown-300">Reading List</Link>
+                    <Link to='/readinglist' className="text-white hover:text-brown-300">Reading List</Link>
                 </li>
                 <li>
-                    <Link to='/contact' className="text-black hover:text-brown-300">Contact</Link>
+                    <Link to='/contact' className="text-white hover:text-brown-300">Contact</Link>
                 </li>
             </ul>
             </div>
